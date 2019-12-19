@@ -26,10 +26,6 @@
 - Building the application using `yarn build`
 
 ## Upcoming sessions
-- updating the JSX to remove the ESLint warnings/errors by chaning
-  - `class` property to `className`
-  - `href="#"` to `href="/"`
-  - `tabindex` to `tabIndex`
 - JavaScript data types 
   - `string`
   - `number`
@@ -48,7 +44,6 @@
   - lifecycle methods
   - hooks
   - React.Fragment
-- adding [markdown](https://www.npmjs.com/package/markdown) parser
 - fetching/posting data using [Axios](https://www.npmjs.com/package/axios)
 - [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
 - [React Redux](https://redux.js.org)
