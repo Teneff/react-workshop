@@ -1,9 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Workshop
 
-## Available Scripts
+## Session 1 (Initial app setup)
 
-In the project directory, you can run:
+- Installing tools
+  - [Visual studio code](https://code.visualstudio.com/)
+    - [Debugger for chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) plugin
+    - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) plugin
+  - [Node.js](https://code.visualstudio.com/)
+  - Chrome plugin
+    - [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+  - Yarn (using `npm i -g yarn`)
+- Bootstrapping React application with [Create React App](https://github.com/facebook/create-react-app)
+  - taking a look of the generated files
+    - package.json
+      - dependencies
+      - [scripts](#initial-scripts)
+      - [browserlist](https://browserl.ist/)
+- Adding dependencies
+  - [Twitter Bootstrap](https://www.npmjs.com/package/bootstrap)
+  - [node-sass](https://www.npmjs.com/package/node-sass)
+- Creating a page
+  - adding layout based on [Bootstrap Blog example](https://getbootstrap.com/docs/4.4/examples/blog/)
+  - including bootstrap sass
+  - creating and including [css file](./blog.css)
+- Building the application using `yarn build`
 
+## Upcoming sessions
+- updating the JSX to remove the ESLint warnings/errors by chaning
+  - `class` property to `className`
+  - `href="#"` to `href="/"`
+  - `tabindex` to `tabIndex`
+- JavaScript data types 
+  - `string`
+  - `number`
+  - `undefined`
+  - `null`
+  - `boolean`
+  - `function`
+  - `class`
+- Naming convention
+- Creating components
+  - props
+    - passing data to children
+    - sending data to parents
+    - `children` prop
+  - state
+  - lifecycle methods
+  - hooks
+  - React.Fragment
+- adding [markdown](https://www.npmjs.com/package/markdown) parser
+- fetching/posting data using [Axios](https://www.npmjs.com/package/axios)
+- [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
+- [React Redux](https://redux.js.org)
+
+## Initial scripts
 ### `yarn start`
 
 Runs the app in the development mode.<br />
