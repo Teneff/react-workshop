@@ -9,29 +9,58 @@ import Featured from "./components/posts/Featured";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 
-import { posts, featuredIDs } from "./config";
+import { posts, featuredIDs, authors } from "./config";
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Category from "./pages/Category";
+
+const postsWithAuthor = posts.map(post => {
+  return {
+    ...post,
+    author: authors.find(author => author.id === post.author)
+  };
+});
 
 function App() {
-  const [jumbotron, ...featured] = posts.filter(post => featuredIDs.includes(post.id));
-  console.log(jumbotron);
+  const [jumbotron, ...featured] = postsWithAuthor.filter(post =>
+    featuredIDs.includes(post.id)
+  );
   return (
     <div className="App">
-      <div className="container">
-        <Header />
+      <Router>
+        <div className="container">
+          <Header />
 
-        <Navigation />
+          <Navigation />
 
-        <Jumbotron {...jumbotron} />
-
-        <div className="row mb-2">
-          <Featured />
-          <Featured />
+          <Switch>
+            <Route path="/" exact>
+              <Jumbotron {...jumbotron} />
+              <div className="row mb-2">
+                {featured.map(post => (
+                  <Featured key={post.id} {...post} />
+                ))}
+              </div>
+            </Route>
+            <Route path="*" />
+          </Switch>
         </div>
-      </div>
 
-      <Home />
+        <Switch>
+          <Route path="/" exact>
+            <Home posts={postsWithAuthor} />
+          </Route>
+          <Route path="/author/:authorId">
+            <div>author by id</div>
+          </Route>
+          <Route path="/category/:category" component={Category} />
+          <Route path="*">
+            <h1>404</h1>
+          </Route>
+        </Switch>
 
-      <Footer />
+        <Footer />
+      </Router>
     </div>
   );
 }

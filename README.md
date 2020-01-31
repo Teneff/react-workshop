@@ -25,7 +25,7 @@
   - creating and including [css file](./blog.css)
 - Building the application using `yarn build`
 
-## Session 2
+## Session 2 ([video][video-session2])
 - adding VSCode plugin [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets) for faster component creation
 - updating the JSX to remove the ESLint warnings/errors by chaning
   - `class` property to `className`
@@ -68,13 +68,31 @@
   - hooks
   - React.Fragment
 
-## Upcoming sessions
 
-- modifying the components to accept props
-- adding [markdown](https://www.npmjs.com/package/markdown) parser
-- adding [momnetjs](https://www.npmjs.com/package/moment) to format dates
-- fetching/posting data using [Axios](https://www.npmjs.com/package/axios)
+## Session 3 ([video][video-session3])
+- modifying the remaing components to render dynamic data
+- Parsing [markdown](https://en.wikipedia.org/wiki/Markdown)
+  - adding [markdown](https://www.npmjs.com/package/markdown) parser
+  - creating [&lt;Markdown /&gt;](./src/components/Markdown.jsx) component inserting parsed markdown with [dangerouslySetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml)
+- Formatting JavasScript Date
+  - adding [momnetjs](https://www.npmjs.com/package/moment) to format dates
 - [React Router](https://reacttraining.com/react-router/web/guides/quick-start)
+  - creating simple page routing
+    - `/` (home page)
+      - `/author/:authorId` (posts by author)
+      - `/category/:categoryId` (posts by category)
+    - `404` (anyhting else)
+
+
+## Upcoming sessions
+- crating a post page
+- creating author page
+- creating API client using [Axios](https://www.npmjs.com/package/axios)
+- fetching/posting data using to [the API](http://ws.headless.dev.ecm/username/) ([API source code][api-source])
 - [React Redux](https://redux.js.org)
 
 ## [Initial React Scripts](./Scripts.md)
+
+[video-session2]: https://web.microsoftstream.com/video/f651a5e0-521c-45ab-a04e-ae1491de62fa
+[video-session3]: https://web.microsoftstream.com/video/28411a8f-caab-42e3-93fe-a90e5b5ccbf2
+[api-source]: https://github.com/Teneff/react-workshop/tree/api

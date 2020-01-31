@@ -1,15 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+import { posts } from '../config';
 
 const Navigation = () => {
   return (
     <div className="nav-scroller py-1 mb-2">
       <nav className="nav d-flex justify-content-between">
-        <a className="p-2 text-muted" href="/">
-          World
-        </a>
-        <a className="p-2 text-muted" href="/">
+        <Link to="/category/World" className="p-2 text-muted">World</Link>
+        <Link className="p-2 text-muted" to="/category/U.S.">
           U.S.
-        </a>
+        </Link>
         <a className="p-2 text-muted" href="/">
           Technology
         </a>

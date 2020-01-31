@@ -4,7 +4,7 @@ import Post from "../components/posts/Post";
 import Pagination from "../components/Pagination";
 import Sidebar from "../components/Sidebar";
 
-const Home = () => {
+const Home = ({ posts }) => {
   return (
     <main role="main" className="container">
       <div className="row">
@@ -13,9 +13,7 @@ const Home = () => {
             From the Firehose
           </h3>
 
-          <Post />
-          <Post />
-          <Post />
+          {posts.map(post => <Post key={post.id} {...post} />)}
 
           <Pagination />
         </div>
