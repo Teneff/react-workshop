@@ -84,15 +84,29 @@
     - `404` (anyhting else)
 
 
+## Session 4 ([video][video-session4])
+  - Navigation
+    - accepting dynamic categories 
+    - making array of unique values
+  - Category page
+    - filtering posts to only display posts from the corresponding category 
+  - Adding `/edit` page
+    - creating textarea and live preview 
+  - API client using [Axios](https://www.npmjs.com/package/axios)
+    - Adding `http-proxy-middleware` (proxying localhost [API][the-api] requests to avoid CORS errors)
+    - fetching posts data from [the API][the-api]
+
+
 ## Upcoming sessions
 - crating a post page
 - creating author page
-- creating API client using [Axios](https://www.npmjs.com/package/axios)
-- fetching/posting data using to [the API](http://ws.headless.dev.ecm/username/) ([API source code][api-source])
+- fetching/posting data using to [the API][the-api] ([API source code][api-source])
 - [React Redux](https://redux.js.org)
 
 ## [Initial React Scripts](./Scripts.md)
 
 [video-session2]: https://web.microsoftstream.com/video/f651a5e0-521c-45ab-a04e-ae1491de62fa
 [video-session3]: https://web.microsoftstream.com/video/28411a8f-caab-42e3-93fe-a90e5b5ccbf2
+[video-session4]: https://web.microsoftstream.com/video/609ec883-b5d9-4978-a275-9570063b5a44
 [api-source]: https://github.com/Teneff/react-workshop/tree/api
+[the-api]: http://ws.headless.dev.ecm/username/

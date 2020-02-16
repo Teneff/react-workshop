@@ -2,7 +2,7 @@ import React from "react";
 import moment from "moment";
 import Markdown from "../Markdown";
 
-const Post = ({ title, date, author, contents }) => {
+const Post = ({ title, date, author = { name: ''}, contents }) => {
   return (
     <div className="blog-post">
       <h2 className="blog-post-title">{title}</h2>

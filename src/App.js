@@ -13,6 +13,7 @@ import { posts, featuredIDs, authors } from "./config";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Category from "./pages/Category";
+import Edit from "./components/posts/Edit";
 
 const postsWithAuthor = posts.map(post => {
   return {
@@ -20,6 +21,13 @@ const postsWithAuthor = posts.map(post => {
     author: authors.find(author => author.id === post.author)
   };
 });
+
+const categories = posts.reduce((acc, post) => {
+  if( acc.includes( post.category ) ) {
+    return acc;
+  }
+  return acc.concat(post.category);
+}, []);
 
 function App() {
   const [jumbotron, ...featured] = postsWithAuthor.filter(post =>
@@ -31,7 +39,7 @@ function App() {
         <div className="container">
           <Header />
 
-          <Navigation />
+          <Navigation categories={categories} />
 
           <Switch>
             <Route path="/" exact>
@@ -53,6 +61,7 @@ function App() {
           <Route path="/author/:authorId">
             <div>author by id</div>
           </Route>
+          <Route path="/edit" component={Edit} />
           <Route path="/category/:category" component={Category} />
           <Route path="*">
             <h1>404</h1>
